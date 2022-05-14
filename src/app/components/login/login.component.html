@@ -1,11 +1,12 @@
 <div class="container">
+    <div class="wave"></div>
     <div class="img">
         <img src="assets/img/components/login/Impuestos.svg" alt="impuesto" class="image">
     </div>
     <div class="login-container">
-        <form action="" method="post" class="form">
-            <h2 class="titulo mb-4">Iniciar Sesión</h2>
-            <div class="form-floating mb-3 mt-3">
+        <form>
+            <h2 class="titulo">Iniciar Sesión</h2>
+            <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="floatingInput" placeholder="Email">
                 <label for="floatingInput">Email</label>
             </div>
@@ -16,7 +17,7 @@
             <div class="mb-3">
                 <a href="#" class="link-primary">¿Has olvidado tu contraseña?</a>
             </div>
-            <button type="submit" class="btn btn-primary btn-block ">Ingresar</button>
+            <button [routerLink]="['/inicio']" type="submit" class="btn btn-primary btn-block mb-3">Ingresar</button>
         </form>
     </div>
 </div>

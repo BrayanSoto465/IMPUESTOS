@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -49,7 +50,7 @@ body.dark{
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    width: 270px;
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
