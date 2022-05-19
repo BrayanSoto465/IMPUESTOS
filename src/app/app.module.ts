@@ -18,6 +18,7 @@ import { IndexIndustriaComponent } from './components/industrias/index-industria
 import { AddIndustriaComponent } from './components/industrias/add-industria/add-industria.component';
 import { UpdateIndustriaComponent } from './components/industrias/update-industria/update-industria.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

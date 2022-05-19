@@ -317,11 +317,12 @@ body.dark .switch::before{
 
 
 .sidebar.close ~ .home{
-    left: 88px;
+    left: 100px;
     height: 100vh;
     width: calc(100% - 88px);
     background-color: blue;
 }
+
 body.dark .home .text{
     color: var(--text-color);
 }
