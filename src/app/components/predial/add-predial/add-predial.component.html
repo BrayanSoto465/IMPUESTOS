@@ -1,3 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar (onToggleSideNav)="onToggleSideNav($event)"></app-navbar>
 
-<h1>Add predial</h1>
+<div class="home" [ngClass]="isSideNavCollapsed ? 'close': ''">
+    <p>add-predial works!</p>
+</div>
+

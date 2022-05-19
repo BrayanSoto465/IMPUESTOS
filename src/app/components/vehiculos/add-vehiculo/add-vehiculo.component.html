@@ -1,3 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar (onToggleSideNav)="onToggleSideNav($event)"></app-navbar>
 
-<p>add-vehiculo works!</p>
+<div class="home" [ngClass]="isSideNavCollapsed ? 'close': ''">
+    <p>add-vehiculo works!</p>
+</div>
+

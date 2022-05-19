@@ -1,3 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar (onToggleSideNav)="onToggleSideNav($event)"></app-navbar>
 
-<p>update-predial works!</p>
+<div class="home" [ngClass]="isSideNavCollapsed ? 'close': ''">
+    <p>update-predial works!</p>
+</div>
+

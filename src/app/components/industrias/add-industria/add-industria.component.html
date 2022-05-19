@@ -1,5 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar (onToggleSideNav)="onToggleSideNav($event)"></app-navbar>
 
-<div class="home">
+<div class="home" [ngClass]="isSideNavCollapsed ? 'close': ''">
     <p>add-industria works!</p>
 </div>
+

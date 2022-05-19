@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+interface SideNavToggle {
+  collapsed: boolean;
+}
+
 @Component({
   selector: 'app-index-industria',
   templateUrl: './index-industria.component.html',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexIndustriaComponent implements OnInit {
 
+  public isSideNavCollapsed = true;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onToggleSideNav(data: SideNavToggle): void{
+    this.isSideNavCollapsed = data.collapsed;
   }
 
 }
