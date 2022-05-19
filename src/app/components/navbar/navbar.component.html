@@ -24,8 +24,8 @@
             </li>
 
             <ul class="menu-links">
-                <li class="nav-link" *ngFor="let data of navData">
-                    <a [routerLink]="[data.routeLink]">
+                <li class="nav-link" *ngFor="let data of navData" >
+                    <a [routerLink]="[data.routeLink]" routerLinkActive="active">
                         <i [class]="data.icon" ></i>
                         <span class="text nav-text">{{data.label}}</span>
                     </a>

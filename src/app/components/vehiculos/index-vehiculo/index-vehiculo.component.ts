@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-index-vehiculo',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexVehiculoComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

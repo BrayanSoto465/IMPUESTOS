@@ -50,7 +50,7 @@ body.dark{
     top: 0;
     left: 0;
     height: 100%;
-    width: 270px;
+    width: 275px;
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
@@ -207,8 +207,18 @@ body.dark .sidebar header .toggle{
     background-color: var(--primary-color);
 }
 
+
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text{
+    color: var(--sidebar-color);
+}
+
+.sidebar li a.active{
+    background-color: var(--primary-color);
+}
+
+.sidebar li a.active .icon,
+.sidebar li a.active .text{
     color: var(--sidebar-color);
 }
 
@@ -301,9 +311,9 @@ body.dark .switch::before{
     position: absolute;
     top: 0;
     top: 0;
-    left: 250px;
+    left: 275px;
     height: 100vh;
-    width: calc(100% - 250px);
+    width: calc(100% - 275px);
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
@@ -316,11 +326,10 @@ body.dark .switch::before{
 }
 
 
-.sidebar.close ~ .home{
-    left: 100px;
+.home.close{
+    left: 88px;
     height: 100vh;
     width: calc(100% - 88px);
-    background-color: blue;
 }
 
 body.dark .home .text{

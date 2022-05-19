@@ -1,11 +1,9 @@
-import { Component, OnInit, HostListener, Output } from '@angular/core';
+import { Component, OnInit, HostListener, EventEmitter, Output } from '@angular/core';
 import { navbarData } from './nav-data';
-import { FormsModule } from '@angular/forms';
-/* import { EventEmitter } from 'stream'; */
 
-/* interface SideNavToggle {
+interface SideNavToggle {
   collapsed: boolean;
-} */
+}
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NavbarComponent implements OnInit {
 
-/*   @Output() onToggleSideNav: EventEmitter = new EventEmitter(); */  
+  @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();   
   public navData: Array<any> = navbarData;
   public collapsed = true;
   public searchInput = '';
@@ -29,10 +27,12 @@ export class NavbarComponent implements OnInit {
 
   toogleOnClick():void {
     this.collapsed = !this.collapsed; 
+    this.onToggleSideNav.emit({collapsed: this.collapsed});
   }
 
   searchOnClick():void {
     this.collapsed = !this.collapsed;
+    this.onToggleSideNav.emit({collapsed: this.collapsed});
   }
 
   switchOnClick():void {
