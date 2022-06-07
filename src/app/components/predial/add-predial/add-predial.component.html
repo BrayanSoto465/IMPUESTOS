@@ -5,93 +5,109 @@
   <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex justify-content-between align-items-center">
       <h4 class="m-0 font-weight-bold text-primary">Nuevo Predial</h4>
-      <a [routerLink]="['/predial']" class="d-flex align-items-center">Regresar<i class='bx bx-chevron-left bx-sm'
-          style=""></i></a>
+      <a [routerLink]="['/predial']" class="d-flex align-items-center">Regresar<i class='bx bx-chevron-left bx-sm'></i></a>
     </div>
     <div class="card-body">
       <form>
 
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="codigo" placeholder="0">
-          <label for="codigo">Codigo</label>
+        <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="codigo" placeholder="0">
+                    <label for="codigo">Codigo</label>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="numeroCuenta" placeholder="115846955">
+                    <label for="numeroCuenta">Numero de Cuenta</label>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="avaluo" placeholder="1500000">
+                    <label for="avaluo">Avaluo</label>
+                </div>  
+            </div>
         </div>
-
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="numeroCuenta" placeholder="115846955">
-          <label for="numeroCuenta">Numero de Cuenta</label>
+        <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" list="datalistOptions" id="Dueño" placeholder="Fernando Fernandez">
+                    <label for="Dueño">Dueño</label>
+                    <datalist id="datalistOptions">
+                      <option value="San Francisco">
+                      <option value="New York">
+                      <option value="Seattle">
+                      <option value="Los Angeles">
+                      <option value="Chicago">
+                    </datalist>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="destino" aria-label="destino">
+                      <option selected value="1">Habitacional</option>
+                      <option value="2">Industrial</option>
+                      <option value="3">Industrial</option>
+                      <option value="3">Comercial</option>
+                      <option value="4">Agropecuario</option>
+                      <option value="5">Minero</option>
+                      <option value="6">Cultural</option>
+                      <option value="7">Recreacional</option>
+                      <option value="8">Salubridad</option>
+                      <option value="9">Institucional</option>
+                      <option value="10">Educativo</option>
+                      <option value="11">Religioso</option>
+                      <option value="12">Agrícola</option>
+                      <option value="13">Pcuario</option>
+                      <option value="14">Agroindustrial</option>
+                      <option value="15">Forestal</option>
+                      <option value="16">Uso publico</option>
+                      <option value="17">Lote urbanizable no urbanizado</option>
+                      <option value="18">Lote urbanizado no construido y/o edificado</option>
+                      <option value="19">Lote no urbanizable</option>
+                      <option value="20">Servicios especiales</option>
+                    </select>
+                    <label for="destino">Destino</label>
+                  </div>
+            </div>
         </div>
-
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" list="datalistOptions" id="Dueño" placeholder="Fernando Fernandez">
-          <label for="Dueño">Dueño</label>
-          <datalist id="datalistOptions">
-            <option value="San Francisco">
-            <option value="New York">
-            <option value="Seattle">
-            <option value="Los Angeles">
-            <option value="Chicago">
-          </datalist>
+        <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="direccion" placeholder="Av 10 # 15 - 18">
+                    <label for="direccion">Direccion</label>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="estrato" aria-label="estrato">
+                      <option selected value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                    <label for="estrato">Estrato</label>
+                  </div>
+            </div>
         </div>
-
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="avaluo" placeholder="1500000">
-          <label for="avaluo">Avaluo</label>
+        <div class="row">
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="areaTerritorio" placeholder="Av 10 # 15 - 18">
+                    <label for="areaTerritorio">Area Territorio</label>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="areaConstruida" placeholder="150">
+                    <label for="areaConstruida">Area Construida</label>
+                  </div>
+            </div>
         </div>
-
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="direccion" placeholder="Av 10 # 15 - 18">
-          <label for="direccion">Direccion</label>
-        </div>
-
-        <div class="form-floating mb-3">
-          <select class="form-select" id="destino" aria-label="destino">
-            <option selected value="1">Habitacional</option>
-            <option value="2">Industrial</option>
-            <option value="3">Industrial</option>
-            <option value="3">Comercial</option>
-            <option value="4">Agropecuario</option>
-            <option value="5">Minero</option>
-            <option value="6">Cultural</option>
-            <option value="7">Recreacional</option>
-            <option value="8">Salubridad</option>
-            <option value="9">Institucional</option>
-            <option value="10">Educativo</option>
-            <option value="11">Religioso</option>
-            <option value="12">Agrícola</option>
-            <option value="13">Pcuario</option>
-            <option value="14">Agroindustrial</option>
-            <option value="15">Forestal</option>
-            <option value="16">Uso publico</option>
-            <option value="17">Lote urbanizable no urbanizado</option>
-            <option value="18">Lote urbanizado no construido y/o edificado</option>
-            <option value="19">Lote no urbanizable</option>
-            <option value="20">Servicios especiales</option>
-          </select>
-          <label for="destino">Destino</label>
-        </div>
-
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="areaTerritorio" placeholder="Av 10 # 15 - 18">
-          <label for="areaTerritorio">Area Territorio</label>
-        </div>
-
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="areaConstruida" placeholder="150">
-          <label for="areaConstruida">Area Construida</label>
-        </div>
-
-        <div class="form-floating mb-3">
-          <select class="form-select" id="estrato" aria-label="estrato">
-            <option selected value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-          <label for="estrato">Estrato</label>
-        </div>
-
       </form>
     </div>
   </div>
