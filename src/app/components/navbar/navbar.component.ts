@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, EventEmitter, Output } from '@angular/core';
 import { navbarData } from './nav-data';
+import { Router } from '@angular/router';
 
 interface SideNavToggle {
   collapsed: boolean;
@@ -17,9 +18,7 @@ export class NavbarComponent implements OnInit {
   public collapsed = true;
   public searchInput = '';
 
-  constructor() { 
-    
-  }
+  constructor(private _router : Router) { }
 
   ngOnInit(): void {
 
@@ -58,6 +57,11 @@ export class NavbarComponent implements OnInit {
     }else{
       this.navData = navbarData;
     } 
+  }
+
+  logout(): void{
+    localStorage.clear();
+    this._router.navigate(['']);
   }
 
 }

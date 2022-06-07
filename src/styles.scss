@@ -222,6 +222,11 @@ body.dark .sidebar header .toggle{
     color: var(--sidebar-color);
 }
 
+body.dark .sidebar li a.active .icon,
+body.dark .sidebar li a.active .text{
+    color: var(--text-color);
+}
+
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
     color: var(--text-color);
