@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NgForm } from '@angular/forms'
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -35,8 +35,7 @@ export class LoginComponent implements OnInit {
       this._usuarioService.login(data).subscribe(
         response => {
           if(response.user.Rol == "Superadministrador" || response.user.Rol == "Administrador"){
-          
-            localStorage.setItem('token', response.token);
+            localStorage.setItem('token', response.tokenReturn);
             localStorage.setItem('_id', response.user.Id);
             localStorage.setItem('_rol', response.user.Rol);
             this._router.navigate(['/usuarios']);

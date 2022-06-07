@@ -23,35 +23,30 @@ const routes: Routes = [
   {path: 'usuarios', children: [
     {path: '', component: IndexUsuarioComponent},
     {path: 'add', component: AddUsuarioComponent},
-    {path: 'update', component: UpdateUsuarioComponent},
     {path: ':id', component: UpdateUsuarioComponent},
   ]},
 
   {path: 'predial', children: [
     {path: '', component: IndexPredialComponent},
     {path: 'add', component: AddPredialComponent},
-    {path: 'update', component: UpdatePredialComponent},
-    {path: ':id', component: UpdateUsuarioComponent},
+    {path: ':id', component: UpdatePredialComponent},
   ]},
 
   {path: 'industriaycomercio', children: [
     {path: '', component: IndexIndustriaComponent},
     {path: 'add', component: AddIndustriaComponent},
-    {path: 'update', component: UpdateIndustriaComponent},
-    {path: ':id', component: UpdateUsuarioComponent},
+    {path: ':id', component: UpdateIndustriaComponent},
   ]},
 
   {path: 'vehiculos', children: [
     {path: '', component: IndexVehiculoComponent},
     {path: 'add', component: AddVehiculoComponent},
-    {path: 'update', component: UpdateVehiculoComponent},
-    {path: ':id', component: UpdateUsuarioComponent},
+    {path: ':id', component: UpdateVehiculoComponent},
   ]},
 
   {path: 'pagos', children: [
     {path: '', component: IndexVehiculoComponent},
     {path: 'add', component: AddVehiculoComponent},
-    {path: 'update', component: UpdateVehiculoComponent},
     {path: ':id', component: UpdateUsuarioComponent},
   ]},
 
